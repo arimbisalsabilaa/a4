@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Izin Sakit</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .kertas_a4 {
+            width: 21cm;
+            height: 29.7cm;
+            background-color: white;
+
+            padding: 2cm;
+            margin: auto;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 150%;
+        }
+        
+        .judul {
+            font-family: "Century Gothic", sans-serif;
+            font-size: 24pt;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 3cm;
+        }
+        
+        .titimangsa {
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        
+        .kepada_yth {
+            padding-left: 1cm;
+            text-indent: -1cm;
+        }
+        
+        .blok_ttd {
+            text-align: right;
+            margin-top: 2cm;
+        }
+        
+        .nama_ttd {
+            margin-top: 3cm;
+        }
+
+        /* Style tombol cetak */
+        .btn-cetak {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            margin: 20px auto;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-cetak:hover {
+            background-color: #45a049;
+        }
+
+        /* Sembunyikan tombol saat dicetak */
+        @media print {
+            .btn-cetak {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Tombol Cetak PDF -->
+    <button class="btn-cetak" onclick="cetakPDF()">Cetak PDF</button>
+
+    <div class="kertas_a4">
+        <h1 class="judul">SURAT IZIN SAKIT</h1> 
+
+        <p class="titimangsa">Bandung, 17 Februari 2025</p>
+
+        <p class="kepada_yth">
+            Kepada Yth. <br/>
+            <b>Bapak/Ibu Guru Wali Kelas</b> <br/>
+            SMA PGRI <br/>
+            Di Tempat
+        </p>
+
+        <p>Saya yang bertanda tangan di bawah ini:</p>
+        <ul>
+            <li><b>Nama:</b> Arimbi Salsabila</li>
+            <li><b>Kelas:</b> XII</li>
+        </ul>
+        <p>
+            Dengan ini menginformasikan bahwa saya tidak dapat mengikuti kegiatan belajar di sekolah pada hari ini karena sakit.
+            Oleh karena itu, kami mohon kepada Bapak/Ibu Guru memberikan keringanan selama masa pemulihan.
+        </p>
+
+        <p>
+            Demikian surat ini kami buat dengan sebenar-benarnya. Atas perhatian dan pengertiannya, kami ucapkan terima kasih.
+        </p>
+
+        <div class="blok_ttd">
+            <p><i>Hormat kami,</i></p>
+
+            <p class="nama_ttd">
+                [Nama Orang Tua/Wali] <br/>
+                [Tanda Tangan]
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk mencetak halaman menjadi PDF
+        function cetakPDF() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
